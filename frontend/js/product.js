@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get('id');
 
-const API_URL = `http://localhost:5000/api/products/${productId}`;
+const API_URL = `https://shopvibe-backend-scp1.onrender.com/api/products/${productId}`;
 const productDetailsContainer = document.getElementById('product-details');
 const loadingElement = document.getElementById('loading');
 const errorElement = document.getElementById('error');

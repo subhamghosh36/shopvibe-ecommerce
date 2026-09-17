@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api/products';
+const API_URL = 'https://shopvibe-backend-scp1.onrender.com/api/products';
 const productList = document.getElementById('product-list');
 const loadingElement = document.getElementById('loading');
 const errorElement = document.getElementById('error');
