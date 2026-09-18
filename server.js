@@ -12,7 +12,11 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: 'https://shopvibe-ecommerce-nine.vercel.app', // Your exact Vercel URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.json()); // Parses incoming JSON payloads
 
 // Basic Health Route
