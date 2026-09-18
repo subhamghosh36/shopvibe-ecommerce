@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     try {
         // Fetch orders using the live Render backend URL
-        const response = await fetch('https://shopvibe-backend.onrender.com/api/orders/myorders', {
+        const response = await fetch('https://shopvibe-backend-scp1.onrender.com/api/orders/myorders', {
             method: 'GET',
             headers: {
                 Authorization: `Bearer ${userInfo.token}`
