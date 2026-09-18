@@ -24,4 +24,16 @@ const addOrderItems = async (req, res) => {
     }
 };
 
-module.exports = { addOrderItems };
+// @desc    Get logged in user's orders
+// @route   GET /api/orders/myorders
+const getMyOrders = async (req, res) => {
+    try {
+        // Find orders where the user ID matches the logged-in user's token ID
+        const orders = await Order.find({ user: req.user._id });
+        res.json(orders);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
+
+module.exports = { addOrderItems, getMyOrders };

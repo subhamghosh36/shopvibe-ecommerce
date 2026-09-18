@@ -14,8 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Replace the Login link with Name and Logout button
             listItem.innerHTML = `
-                <span style="color: #17a2b8; margin-right: 15px; font-weight: bold;">Hi, ${firstName}</span>
-                <a href="#" id="logout-btn" style="cursor: pointer; color: #dc3545;">Logout</a>
+                <span style="color: var(--primary-color); margin-right: 15px; font-weight: bold;">Hi, ${firstName}</span>
+                <a href="orders.html" style="margin-right: 15px; font-weight: 600;">My Orders</a>
+                <a href="#" id="logout-btn" style="cursor: pointer; color: var(--danger); font-weight: 600;">Logout</a>
             `;
 
             // Attach logout event listener
